@@ -11,6 +11,15 @@ if USB_DEVICE_STACK
 config USB_NRFX
     default y
 
+config USB_DEVICE_VID
+    default 0x5048
+
+config USB_DEVICE_PID
+    default 0xFF00
+
+config USB_DEVICE_MANUFACTURER
+    default "Team PHDesign"
+
 endif # USB_DEVICE_STACK
 
 config BT_CTLR

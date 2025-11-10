@@ -7,8 +7,20 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 
 / {
+    behaviors {
+        // Hold Backspace to clear all BT profiles
+        bt_clr_all: bt_clear_all {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <2000>;
+            bindings = <&bt BT_CLR_ALL>, <&bt BT_CLR>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -27,10 +39,21 @@
             display-name = "Function";
             bindings = <
 &kp GRAVE &kp F1    &kp F2    &kp F3          &kp F4    &kp F5    &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &kp F11   &kp F12       &kp DEL
-&trans    &trans    &trans    &trans          &trans    &trans    &trans    &trans    &trans    &trans    &trans    &kp HOME  &kp END       &studio_unlock
-&trans    &trans    &trans    &trans          &trans    &trans    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &kp PG_UP &kp PG_DN               &trans
-&trans              &trans    &trans          &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans                  &trans
+&trans    &trans    &trans    &trans          &sys_reset  &trans  &trans    &trans    &trans    &trans    &kp PSCRN &kp HOME  &kp END       &trans
+&trans    &trans    &trans    &trans          &trans      &trans  &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &kp PG_UP &kp PG_DN               &trans
+&trans              &trans    &trans          &trans      &trans  &mo 2     &trans    &trans    &trans    &trans    &trans                  &trans
 &trans    &trans    &trans                              &trans                                  &trans    &trans    &trans                  &trans
+            >;
+        };
+
+        bluetooth_layer {
+            display-name = "Bluetooth";
+            bindings = <
+&trans       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &bt_clr_all 0 0
+&out OUT_TOG &trans        &trans        &trans        &bootloader   &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans       &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans          &trans
+&trans                     &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans          &trans
+&trans       &trans        &trans                                    &trans                        &trans  &trans  &trans                  &trans
             >;
         };
 
