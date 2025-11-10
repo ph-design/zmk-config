@@ -11,6 +11,13 @@
 
 / {
     behaviors {
+        // Macro to clear current BT profile
+        bt_clr_macro: bt_clr_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_CLR>;
+        };
+        
         // Macro to clear all BT profiles
         bt_clr_all_macro: bt_clr_all_macro {
             compatible = "zmk,behavior-macro";
@@ -18,13 +25,13 @@
             bindings = <&bt BT_CLR_ALL>;
         };
         
-        // Hold Backspace to clear all BT profiles
+        // Hold to clear all BT profiles, Tap to clear current
         bt_clr_all: bt_clear_all {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
+            #binding-cells = <0>;
             flavor = "tap-preferred";
             tapping-term-ms = <2000>;
-            bindings = <&bt_clr_all_macro>, <&bt>;
+            bindings = <&bt_clr_all_macro>, <&bt_clr_macro>;
         };
     };
 
@@ -56,7 +63,7 @@
         bluetooth_layer {
             display-name = "Bluetooth";
             bindings = <
-&trans       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &bt_clr_all 0 BT_CLR
+&trans       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &bt_clr_all
 &out OUT_TOG &trans        &trans        &trans        &bootloader   &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans       &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans          &trans
 &trans                     &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans          &trans
