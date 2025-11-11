@@ -4,6 +4,6 @@
 # Add LED widgets source files
 if(CONFIG_ZMK_LED_WIDGETS)
     zephyr_library_sources(${CMAKE_CURRENT_SOURCE_DIR}/led_indicators.c)
-    zephyr_library_sources(${CMAKE_CURRENT_SOURCE_DIR}/../../app/src/led_widgets.c)
-    zephyr_include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../app/include)
+    zephyr_library_sources(${ZMKFIRMWARE_ZEPHYR_MODULE_DIR}/app/src/led_widgets.c)
+    zephyr_include_directories(${ZMKFIRMWARE_ZEPHYR_MODULE_DIR}/app/include)
 endif()
