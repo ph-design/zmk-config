@@ -5,26 +5,4 @@
  * SPDX-License-Identifier: MIT
  */
 
-/ {
-	chosen {
-		/* Point ZMK to the WS2812 device so per-key lighting works */
-		zmk,led-widgets-dev = &ws2812_leds;
-		zmk,leds = &ws2812_leds;
-	};
 
-	/* WS2812 / SK6812 chain on P1.02, 61 LEDs (one per key) */
-	ws2812_leds: ws2812_leds {
-		compatible = "worldsemi,ws2812";
-		gpios = <&gpio1 2 GPIO_ACTIVE_HIGH>;
-		chain-length = <61>;
-		status = "okay";
-		label = "WS2812_LEDS";
-	};
-
-    vbatt: vbatt {
-        compatible = "zmk,battery-voltage-divider";
-        io-channels = <&adc 19>;
-        output-ohms = <2000000>;
-        full-ohms = <(2000000 + 806000)>;
-    };
-};

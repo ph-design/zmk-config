@@ -1,0 +1,40 @@
+/*
+ * Board-specific overlay for PH60-SC_V2 shield on the ph_lite board
+ * Following ZMK official underglow guidance: put hardware-specific
+ * LED strip and battery divider definitions in a shield/boards/<board>.overlay
+ */
+
+#include "../PH60-SC_V2.dtsi"
+
+/ {
+    chosen {
+        /* Underglow and LED widgets point to the LED strip device */
+        zmk,underglow = &ws2812_leds;
+        zmk,led-widgets-dev = &ws2812_leds;
+        zmk,leds = &ws2812_leds;
+        /* Battery voltage divider chosen node */
+        zmk,battery = &vbatt;
+    };
+
+    /* WS2812 / SK6812 chain on P1.02, 61 LEDs (one per key)
+     * Note: For nRF52 boards the tutorial recommends using an SPI-based
+     * driver (worldsemi,ws2812-spi) tied to a SPI controller. If you prefer
+     * the GPIO driver, the worldsemi,ws2812 compatible with `gpios` works too.
+     */
+    ws2812_leds: ws2812_leds {
+        compatible = "worldsemi,ws2812";
+        gpios = <&gpio1 2 GPIO_ACTIVE_HIGH>;
+        chain-length = <61>;
+        status = "okay";
+        label = "WS2812_LEDS";
+    };
+
+    /* Battery voltage divider (VBATT) on P0.19 */
+    vbatt: vbatt {
+        compatible = "zmk,battery-voltage-divider";
+        io-channels = <&adc 19>;
+        /* Typical divider values (adjust to your hardware) */
+        output-ohms = <2000000>;
+        full-ohms = <(2000000 + 806000)>;
+    };
+};
