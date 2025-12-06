@@ -54,6 +54,14 @@
         zmk,battery = &vbatt;
     };
 
+    /* External power control - required for RGB underglow */
+    ext_power {
+        compatible = "zmk,ext-power-generic";
+        label = "EXT_POWER";
+        control-gpios = <&gpio0 19 GPIO_ACTIVE_HIGH>;
+        init-delay-ms = <50>;
+    };
+
     /* Battery voltage divider (VBATT) on P0.19 */
     vbatt: vbatt {
         compatible = "zmk,battery-voltage-divider";
