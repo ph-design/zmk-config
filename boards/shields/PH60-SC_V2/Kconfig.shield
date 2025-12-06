@@ -1,0 +1,5 @@
+# Copyright (c) 2025 Team PHDesign
+# SPDX-License-Identifier: MIT
+
+config SHIELD_PH60_SC_V2
+	def_bool $(shields_list_contains,PH60-SC_V2)

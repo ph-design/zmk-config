@@ -1,0 +1,12 @@
+file_format: "1"
+id: PH60-SC_V2
+name: PH60-SC_V2
+type: shield
+url: https://github.com/ph-design/zmk-config
+requires: [ph_lite]
+exposes: []
+features:
+  - keys
+  - studio
+siblings:
+  - PH60-SC_V2
