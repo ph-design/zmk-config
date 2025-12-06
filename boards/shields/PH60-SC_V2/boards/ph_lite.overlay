@@ -4,8 +4,6 @@
  * LED strip and battery divider definitions in a shield/boards/<board>.overlay
  */
 
-#include "../PH60-SC_V2.dtsi"
-
 / {
     chosen {
         /* Underglow and LED widgets point to the LED strip device */
