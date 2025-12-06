@@ -107,7 +107,7 @@ RC(4,0)  RC(4,1)  RC(4,2)                   RC(4,6)                    RC(4,10) 
 			, <&gpio1 9  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 			, <&gpio0 8  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 			, <&gpio0 6  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			, <&gpio0 2  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			, <&gpio0 26  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 			;
 		
 		col-gpios
