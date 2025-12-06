@@ -10,32 +10,6 @@
 / {
 	chosen {
 		zmk,kscan = &kscan0;
-		zmk,physical-layout = &s60test_layout;
-	};
-
-	kscan0: kscan {
-		compatible = "zmk,kscan-gpio-matrix";
-		label = "KSCAN";
-		diode-direction = "col2row";
-		wakeup-source;
-
-		row-gpios = <&gpio0 12 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
-
-		col-gpios = <&gpio0 14 GPIO_ACTIVE_HIGH>;
-	};
-};
-/*
- * Copyright (c) 2025 Team PHDesign
- *
- * SPDX-License-Identifier: MIT
- */
-
-#include <dt-bindings/zmk/matrix_transform.h>
-#include <physical_layouts.dtsi>
-
-/ {
-	chosen {
-		zmk,kscan = &kscan0;
 		zmk,physical-layout = &PH60SC_layout;
 	};
 
