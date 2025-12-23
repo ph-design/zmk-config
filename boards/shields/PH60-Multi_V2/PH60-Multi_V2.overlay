@@ -1,0 +1,18 @@
+/*
+ * Copyright (c) 2025 Team PHDesign
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include "PH60-Multi_V2.dtsi"
+
+
+/ {
+	chosen {
+		zmk,battery = &vddh;
+	};
+
+	vddh: vddh {
+		compatible = "zmk,battery-vddh";
+	};
+};
