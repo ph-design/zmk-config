@@ -10,6 +10,8 @@
 / {
 	chosen {
 		zmk,battery = &vddh;
+		zmk,physical-layout = &s60test_layout;
+		zmk,kscan = &kscan0;
 	};
 
 	vddh: vddh {
