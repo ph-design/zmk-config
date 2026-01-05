@@ -11,7 +11,7 @@
 / {
 	chosen {
 		zmk,kscan = &kscan0;
-		zmk,physical-layout = &s60test_layout;
+		zmk,physical-layout = &ph60_position_map;
 	};
 
 
@@ -61,8 +61,4 @@
 			, <&gpio0 26 GPIO_ACTIVE_HIGH>
 			;
 	};
-};
-
-&s60test_layout {
-	transform = <&default_transform>;
 };

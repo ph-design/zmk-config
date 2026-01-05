@@ -10,7 +10,7 @@
 / {
 	chosen {
 		zmk,battery = &vddh;
-		zmk,physical-layout = &s60test_layout;
+		zmk,physical-layout = &ph60_position_map;
 		zmk,kscan = &kscan0;
 	};
 
