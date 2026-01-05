@@ -64,8 +64,8 @@ ph60_ansi_layout: ph60_ansi_layout {
     , <&key_physical_attrs 125 100  125  400       0     0     0>
     , <&key_physical_attrs 125 100  250  400       0     0     0>
     , <&key_physical_attrs 275 100  375  400       0     0     0>
-    , <&key_physical_attrs 225 100  650  400       0     0     0>
-    , <&key_physical_attrs 125 100  875  400       0     0     0>
+    , <&key_physical_attrs 125 100  650  400       0     0     0>
+    , <&key_physical_attrs 225 100  775  400       0     0     0>
     , <&key_physical_attrs 125 100 1000  400       0     0     0>
     , <&key_physical_attrs 125 100 1125  400       0     0     0>
     , <&key_physical_attrs 125 100 1250  400       0     0     0>
