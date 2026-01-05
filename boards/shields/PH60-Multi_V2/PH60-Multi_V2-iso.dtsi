@@ -17,7 +17,8 @@ ph60_iso_layout: ph60_iso_layout {
     , <&key_physical_attrs 100 100 1000    0       0     0     0>
     , <&key_physical_attrs 100 100 1100    0       0     0     0>
     , <&key_physical_attrs 100 100 1200    0       0     0     0>
-    , <&key_physical_attrs 200 100 1300    0       0     0     0>
+    , <&key_physical_attrs 100 100 1300    0       0     0     0>
+    , <&key_physical_attrs 100 100 1400    0       0     0     0>
     , <&key_physical_attrs 150 100    0  100       0     0     0>
     , <&key_physical_attrs 100 100  150  100       0     0     0>
     , <&key_physical_attrs 100 100  250  100       0     0     0>
@@ -31,7 +32,7 @@ ph60_iso_layout: ph60_iso_layout {
     , <&key_physical_attrs 100 100 1050  100       0     0     0>
     , <&key_physical_attrs 100 100 1150  100       0     0     0>
     , <&key_physical_attrs 100 100 1250  100       0     0     0>
-    , <&key_physical_attrs 150 100 1350  100       0     0     0>
+    , <&key_physical_attrs 125 200 1375  100       0     0     0>
     , <&key_physical_attrs 175 100    0  200       0     0     0>
     , <&key_physical_attrs 100 100  175  200       0     0     0>
     , <&key_physical_attrs 100 100  275  200       0     0     0>
@@ -44,8 +45,9 @@ ph60_iso_layout: ph60_iso_layout {
     , <&key_physical_attrs 100 100  975  200       0     0     0>
     , <&key_physical_attrs 100 100 1075  200       0     0     0>
     , <&key_physical_attrs 100 100 1175  200       0     0     0>
-    , <&key_physical_attrs 100 200 1275  200       0     0     0>  /* ISO Enter - tall */
-    , <&key_physical_attrs 225 100    0  300       0     0     0>
+    , <&key_physical_attrs 100 100 1275  200       0     0     0>
+    , <&key_physical_attrs 125 100    0  300       0     0     0>
+    , <&key_physical_attrs 100 100  125  300       0     0     0>
     , <&key_physical_attrs 100 100  225  300       0     0     0>
     , <&key_physical_attrs 100 100  325  300       0     0     0>
     , <&key_physical_attrs 100 100  425  300       0     0     0>
@@ -56,12 +58,14 @@ ph60_iso_layout: ph60_iso_layout {
     , <&key_physical_attrs 100 100  925  300       0     0     0>
     , <&key_physical_attrs 100 100 1025  300       0     0     0>
     , <&key_physical_attrs 100 100 1125  300       0     0     0>
-    , <&key_physical_attrs 100 100 1225  300       0     0     0>
-    , <&key_physical_attrs 175 100 1325  300       0     0     0>
+    , <&key_physical_attrs 175 100 1225  300       0     0     0>
+    , <&key_physical_attrs 100 100 1400  300       0     0     0>
     , <&key_physical_attrs 125 100    0  400       0     0     0>
     , <&key_physical_attrs 125 100  125  400       0     0     0>
     , <&key_physical_attrs 125 100  250  400       0     0     0>
-    , <&key_physical_attrs 625 100  375  400       0     0     0>
+    , <&key_physical_attrs 225 100  375  400       0     0     0>
+    , <&key_physical_attrs 125 100  600  400       0     0     0>
+    , <&key_physical_attrs 275 100  725  400       0     0     0>
     , <&key_physical_attrs 125 100 1000  400       0     0     0>
     , <&key_physical_attrs 125 100 1125  400       0     0     0>
     , <&key_physical_attrs 125 100 1250  400       0     0     0>
