@@ -10,6 +10,15 @@
     /* ISO layout extracted to a separate file for maintainability. */
     #include "PH60-Multi_V2-iso.dtsi"
 
+    /* WK layout - Winkeyless */
+    #include "PH60-Multi_V2-wk.dtsi"
+
+    /* WKL layout - Winkeyless */
+    #include "PH60-Multi_V2-wkl.dtsi"
+
+    /* HHKB layouts */
+    #include "PH60-Multi_V2-hhkb.dtsi"
+
     ph60_position_map: position_map {
       compatible = "zmk,physical-layout-position-map";
       complete;
@@ -33,6 +42,39 @@
           29 30 31 32 33 34 35 36 37 38 39 40 41
           42 43 44 45 46 47 48 49 50 51 52 53 54 55
           56 57 58 59 60 61 62 63 64 65
+        >;
+      };
+
+      wk_map: wk {
+        physical-layout = <&ph60_wk_layout>;
+        positions = <
+          0 1 2 3 4 5 6 7 8 9 10 11 12 13 14
+          15 16 17 18 19 20 21 22 23 24 25 26 27 28
+          29 30 31 32 33 34 35 36 37 38 39 40 41
+          42 43 44 45 46 47 48 49 50 51 52 53 54 55
+          56 57 58 59 60 61 62 63 65
+        >;
+      };
+
+      wkl_map: wkl {
+        physical-layout = <&ph60_wkl_layout>;
+        positions = <
+          0 1 2 3 4 5 6 7 8 9 10 11 12 13 14
+          15 16 17 18 19 20 21 22 23 24 25 26 27 28
+          29 30 31 32 33 34 35 36 37 38 39 40 41
+          42 43 44 45 46 47 48 49 50 51 52 53 54 55
+          56 58 59 60 61 62 65
+        >;
+      };
+
+      hhkb_map: hhkb {
+        physical-layout = <&ph60_hhkb_layout>;
+        positions = <
+          0 1 2 3 4 5 6 7 8 9 10 11 12 13 14
+          15 16 17 18 19 20 21 22 23 24 25 26 27 28
+          29 30 31 32 33 34 35 36 37 38 39 40 41
+          42 43 44 45 46 47 48 49 50 51 52 53 54 55
+          57 58 59 60 61 62 63
         >;
       };
     };
