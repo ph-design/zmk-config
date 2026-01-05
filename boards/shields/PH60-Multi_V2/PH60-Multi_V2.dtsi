@@ -11,7 +11,7 @@
 / {
 	chosen {
 		zmk,kscan = &kscan0;
-		zmk,physical-layout = &ph60_position_map;
+		zmk,physical-layout = &ansi_map;
 	};
 
 
