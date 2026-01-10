@@ -53,10 +53,11 @@
 		zmk,underglow = &led_strip;
 	};
 
-	vddh: vddh {
-		compatible = "zmk,battery-nrf-vddh";
-	};
-
+    ext_power: ext_power {
+        compatible = "zmk,ext-power-generic";
+        control-gpios = <&gpio0 27 GPIO_ACTIVE_HIGH>;
+        init-delay-ms = <50>;
+    };
 	ext_power {
 		compatible = "zmk,ext-power-generic";
 		label = "EXT_POWER";
