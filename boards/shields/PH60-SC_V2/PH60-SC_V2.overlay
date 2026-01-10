@@ -44,7 +44,7 @@
 		color-mapping = <LED_COLOR_ID_GREEN
 				 LED_COLOR_ID_RED
 				 LED_COLOR_ID_BLUE>;
-		ext-power = <&ext_power>;
+		ext-power = <&rgb_power>;
 	};
 };
 
@@ -58,7 +58,7 @@
 		compatible = "zmk,battery-nrf-vddh";
 	};
 
-	ext_power: ext-power {
+	rgb_power: ext-power {
 		compatible = "zmk,ext-power-generic";
 		label = "EXT_POWER";
 		status = "okay";
