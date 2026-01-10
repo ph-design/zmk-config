@@ -19,18 +19,14 @@
 #
 ---
 include:
-  - board: ph_lite
-    shield: s60test
-    snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
-    artifact-name: ph_lite_s60test_with_studio
+    #removed s60test in production branch
   - board: ph_lite
     shield: PH60-SC_V2
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
-    artifact-name: ph_lite_PH60-SC_V2_with_studio
+    artifact-name: PH60-SC_V2_Canary
   - board: ph_lite
     shield: PH60-Multi_V2
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
-    artifact-name: ph_lite_PH60-Multi_V2_with_studio
+    artifact-name: PH60-Multi_V2_Canary

@@ -10,5 +10,4 @@ supported:
   - adc
   - usb_device
   - ble
-  - pwm
   - watchdog

@@ -12,6 +12,7 @@
         zmk,battery = &vbatt;
     };
 
+    //For Charger with 5V buck output
     vbatt: vbatt {
         compatible = "zmk,battery-voltage-divider";
         io-channels = <&adc 2>;
