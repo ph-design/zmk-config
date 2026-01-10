@@ -44,7 +44,6 @@
 		color-mapping = <LED_COLOR_ID_GREEN
 				 LED_COLOR_ID_RED
 				 LED_COLOR_ID_BLUE>;
-		ext-power = <&rgb_power>;
 	};
 };
 
@@ -52,6 +51,7 @@
 	chosen {
 		zmk,battery = &vddh;
 		zmk,underglow = &led_strip;
+		zmk,ext-power = &rgb_power;
 	};
 
 	vddh: vddh {
