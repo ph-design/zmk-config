@@ -53,16 +53,10 @@
 		zmk,underglow = &led_strip;
 	};
 
-    ext_power: ext_power {
-        compatible = "zmk,ext-power-generic";
-        control-gpios = <&gpio0 27 GPIO_ACTIVE_HIGH>;
-        init-delay-ms = <50>;
-    };
-	ext_power {
+	ext_power: ext_power {
 		compatible = "zmk,ext-power-generic";
-		label = "EXT_POWER";
 		control-gpios = <&gpio0 27 GPIO_ACTIVE_HIGH>;
-		init-delay-ms = <100>;
+		init-delay-ms = <50>;
 	};
 };
 
