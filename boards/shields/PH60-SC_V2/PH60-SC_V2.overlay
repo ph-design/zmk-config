@@ -57,7 +57,7 @@
 		compatible = "zmk,battery-nrf-vddh";
 	};
 
-	ext-power {
+	ext_power: ext_power {
 		compatible = "zmk,ext-power-generic";
 		label = "EXT_POWER";
 		control-gpios = <&gpio0 27 GPIO_ACTIVE_HIGH>;
