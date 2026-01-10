@@ -7,3 +7,14 @@
 #include "PH60-SC_V2.dtsi"
 
 
+/ {
+	chosen {
+		zmk,battery = &vddh;
+	};
+
+	vddh: vddh {
+		compatible = "zmk,battery-nrf-vddh";
+	};
+};
+
+
