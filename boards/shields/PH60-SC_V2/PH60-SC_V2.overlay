@@ -63,7 +63,7 @@
 		label = "EXT_POWER";
 		status = "okay";
 		init-delay-ms = <50>;
-		control-gpios = <&gpio0 12 GPIO_ACTIVE_HIGH>;
+		control-gpios = <&gpio0 27 GPIO_ACTIVE_HIGH>;
 	};
 };
 
