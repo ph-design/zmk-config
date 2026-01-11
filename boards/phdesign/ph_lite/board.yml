@@ -1,0 +1,5 @@
+board:
+  name: ph_lite
+  vendor: phdesign
+  socs:
+    - name: nrf52840

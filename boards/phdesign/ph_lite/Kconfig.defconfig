@@ -3,9 +3,6 @@
 
 if BOARD_PH_LITE
 
-config BOARD
-    default "ph_lite"
-
 if USB_DEVICE_STACK
 
 config USB_NRFX
