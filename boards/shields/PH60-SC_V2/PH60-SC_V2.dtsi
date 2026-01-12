@@ -15,7 +15,7 @@
 
 	PH60SC_layout: PH60SC_layout {
 		compatible = "zmk,physical-layout";
-		display-name = "60% ANSI Layout";
+		display-name = "ANSI";
 		
 		keys  //                     w   h    x    y     rot    rx    ry
 			= <&key_physical_attrs 100 100    0    0       0     0     0>
