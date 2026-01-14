@@ -1,6 +1,6 @@
 ph60_iso_layout: ph60_iso_layout {
   compatible = "zmk,physical-layout";
-  display-name = "PH60 ISO";
+  display-name = "ISO";
   transform = <&iso_transform>;
   kscan = <&kscan0>;
   keys  //                     w   h    x    y     rot    rx    ry
