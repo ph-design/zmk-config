@@ -2,7 +2,7 @@
 ph60_wkl_layout: ph60_wkl_layout {
   compatible = "zmk,physical-layout";
   display-name = "WKL";
-  transform = <&default_transform>;
+  transform = <&wkl_transform>;
   kscan = <&kscan0>;
   keys  //                     w   h    x    y     rot    rx    ry
     = <&key_physical_attrs 100 100    0    0       0     0     0>
